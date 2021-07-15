@@ -15,16 +15,17 @@ int main()
 	char C;
 	double zodiak = 0;
 	setlocale(LC_ALL, "RUSSIAN");
-	cout << "Ââåäèòå äàòó:\n";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³:\n";
 	cin >> D >> C >> M >> C >> Y;
 
 	int command;
 	while (1) {
 		cout << "Enter command:\n";
-		cout << "1) Çíàê çîäèàêà\n";
-		cout << "2) Ãîä êîãî\n";
-		cout << "3) Äåíü íåäåëè\n";
-		cout << "4) Òåìïåðàòóðà\n";
+		cout << "1) Ã‡Ã­Ã Ãª Ã§Ã®Ã¤Ã¨Ã ÃªÃ \n";
+		cout << "2) ÃƒÃ®Ã¤ ÃªÃ®Ã£Ã®\n";
+		cout << "3) Ã„Ã¥Ã­Ã¼ Ã­Ã¥Ã¤Ã¥Ã«Ã¨\n";
+		cout << "4) Ã’Ã¥Ã¬Ã¯Ã¥Ã°Ã Ã²Ã³Ã°Ã \n";
+		cout << "5) "Ð’Ñ‹Ñ…Ð¾Ð´\n"
 				cin >> command;
 				switch (command) {
 				case 1:
@@ -62,41 +63,41 @@ int main()
 					
 		case 3:
 		{	int D, M, Y;
-		cout << "Ââåäèòå åùå ðàç äàòó:\n";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¥Ã¹Ã¥ Ã°Ã Ã§ Ã¤Ã Ã²Ã³:\n";
 			char C;
-			string S[7] = { "Âîñêðåñåíüå", "Ïîíåäåëüíèê", "Âòîðíèê", "Ñðåäà", "×åòâåðã", "Ïÿòíèöà", "Ñóááîòà" };
+			string S[7] = { "Ã‚Ã®Ã±ÃªÃ°Ã¥Ã±Ã¥Ã­Ã¼Ã¥", "ÃÃ®Ã­Ã¥Ã¤Ã¥Ã«Ã¼Ã­Ã¨Ãª", "Ã‚Ã²Ã®Ã°Ã­Ã¨Ãª", "Ã‘Ã°Ã¥Ã¤Ã ", "Ã—Ã¥Ã²Ã¢Ã¥Ã°Ã£", "ÃÃ¿Ã²Ã­Ã¨Ã¶Ã ", "Ã‘Ã³Ã¡Ã¡Ã®Ã²Ã " };
 			cin >> D >> C >> M >> C >> Y;
 			cout << S[Date(D, M, Y)] << endl;
 			return 0;
 		}
 				break;
 			case 4:
-				cout << "Ââåäèòå åùå ðàç äàòó:\n";
+				cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¥Ã¹Ã¥ Ã°Ã Ã§ Ã¤Ã Ã²Ã³:\n";
 				cin >> Day;
 				cin >> Month;
 				 int Idinf = 0, Tempa = 0;
     if(Month == "jan" || Month == "dec" || Month == "feb"){ 
         Idinf = 1+rand()%+2; 
         Tempa = TemperatureData(D, Idinf); 
-        cout<<D<<"-ãî "<<Month<<" íà óëèöå "<<Tempa<<" ãðàäóñîâ ëþòîãî ìîðîçà. Áóäåøü ñîñóëüêîé!"; 
+        cout<<D<<"-Ã£Ã® "<<Month<<" Ã­Ã  Ã³Ã«Ã¨Ã¶Ã¥ "<<Tempa<<" Ã£Ã°Ã Ã¤Ã³Ã±Ã®Ã¢ Ã«Ã¾Ã²Ã®Ã£Ã® Ã¬Ã®Ã°Ã®Ã§Ã . ÃÃ³Ã¤Ã¥Ã¸Ã¼ Ã±Ã®Ã±Ã³Ã«Ã¼ÃªÃ®Ã©!"; 
     }
     else if(Month == "march" || Month == "april" || Month == "may"){ 
         Idinf = 3+rand()%+5;
         Tempa = TemperatureData(D, Idinf);
-        cout<<D<<"-ãî "<<Month<<" íà óëèöå "<<Tempa<<" ãðàäóñîâ ïðîõëàäû. Îäåâàéòåñü òåïëåå!";
+        cout<<D<<"-Ã£Ã® "<<Month<<" Ã­Ã  Ã³Ã«Ã¨Ã¶Ã¥ "<<Tempa<<" Ã£Ã°Ã Ã¤Ã³Ã±Ã®Ã¢ Ã¯Ã°Ã®ÃµÃ«Ã Ã¤Ã». ÃŽÃ¤Ã¥Ã¢Ã Ã©Ã²Ã¥Ã±Ã¼ Ã²Ã¥Ã¯Ã«Ã¥Ã¥!";
     }
     else if(Month == "juny" || Month == "july" || Month == "aug"){ 
         Idinf = 6+rand()%+8;
         Tempa = TemperatureData(D, Idinf);
-        cout<<D<<"-ãî "<<Month<<" íà óëèöå "<<Tempa<<" ãðàäóñîâ æàðû. Áåãîì íà ìîðå!";
+        cout<<D<<"-Ã£Ã® "<<Month<<" Ã­Ã  Ã³Ã«Ã¨Ã¶Ã¥ "<<Tempa<<" Ã£Ã°Ã Ã¤Ã³Ã±Ã®Ã¢ Ã¦Ã Ã°Ã». ÃÃ¥Ã£Ã®Ã¬ Ã­Ã  Ã¬Ã®Ã°Ã¥!";
     }
     else if(Month == "sep" || Month == "oct" || Month == "nov"){ 
         Idinf = 9+rand()%+11;
         Tempa = TemperatureData(D, Idinf);
-        cout<<D<<"-ãî "<<Month<<" íà óëèöå "<<Tempa<<" ãðàäóñîâ õîëîäà. Òû íîñèøü øàïêó óøàíêó? ";
+        cout<<D<<"-Ã£Ã® "<<Month<<" Ã­Ã  Ã³Ã«Ã¨Ã¶Ã¥ "<<Tempa<<" Ã£Ã°Ã Ã¤Ã³Ã±Ã®Ã¢ ÃµÃ®Ã«Ã®Ã¤Ã . Ã’Ã» Ã­Ã®Ã±Ã¨Ã¸Ã¼ Ã¸Ã Ã¯ÃªÃ³ Ã³Ã¸Ã Ã­ÃªÃ³? ";
     }
     else 
-        cout<<"Íåêîððåêòíûé ââîä!";
+        cout<<"ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤!";
     return 0; 
 				break;
 					return 0;
